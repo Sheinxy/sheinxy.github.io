@@ -1,0 +1,59 @@
+<html>
+
+<head>
+    <title>Sheinxy's Experimental Cave</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="content">
+        <div id="welcome" style="background-image: url('./images/welcome.png');">
+            <img src="https://www.gravatar.com/avatar/88a7ac03b956d2e189af6b3fa6dc6ebe?s=150" />
+            <h1>Sheinxy's Experimental Cave</h1>
+            <p>Welcome to my Experimental Cave! Here lie down many weird projects of my creation
+                all for your enjoyment!
+            </p>
+            <ul>
+                <li class="button"><a href="https://twitter.com/Sheinxy">Twitter</a></li>
+                <li class="button"><a href="https://github.com/Sheinxy">Github</a></li>
+                <li class="button"><a href="https://deviantart.com/Sheinxy">DeviantArt</a></li>
+                <li class="button"><a href="https://www.youtube.com/channel/UCsDms14VI1jZssfZFMheU2w">Youtube</a></li>
+            </ul>
+        </div>
+        <div id="recentProjects" style="background-image: url('./images/recent.png');">
+            <div>
+                <h1>Most recent projects:</h1>
+                <ul style="list-style-type: none;">
+                    <li class="button" onclick="changeContent('catTranslator')"><a>Cat Translator</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="allProjects" style="background-image: url('./images/all.png');">
+            <div>
+                <h1>All projects:</h1>
+                <ul style="list-style-type: none;">
+                    <li class="button"><a href="./CatTranslator/">Cat Translator</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="catTranslator">
+            <iframe src="./CatTranslator/index.html" width="100%" height="100%"></iframe>
+        </div>
+    </div>
+    <div class="nav" onclick="futureContent(-1)"><a>&lt;&lt;</a></div>
+    <div class="nav rightNav" onclick="futureContent(1)"><a>&gt;&gt;</a></div>
+    <div class="navList">
+        <ul>
+            <li class="button" onclick="changeContent('welcome')"><a>Welcome</a></li>
+            <li class="button" onclick="changeContent('recentProjects')"><a>Recent</a></li>
+            <li class="button" onclick="changeContent('allProjects')"><a>Projects</a></li>
+        </ul>
+    </div>
+    <script>
+        setup();
+        displayContent();
+    </script>
+</body>
+
+</html>
