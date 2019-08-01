@@ -20,5 +20,5 @@ function changeTheme() {
     }
     setCookie('theme', current, 365)
     theme.href = './styles/' + current + '.css';
-    icon.href = './assets/icon-' + current + '.png';
+    icon.src = './assets/icon-' + current + '.png';
 }
