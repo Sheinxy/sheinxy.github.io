@@ -1,54 +1,89 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" href="./assets/logo.png" />
+
     <title>Sheinxy's Experimental Cave</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
 </head>
 
 <body>
-    <div class="content">
-        <div id="welcome" style="background-image: url('./images/welcome.png');">
+    <header>
+        <img src="./assets/logo.png" />
+        <div>
+            <a href="#about">About Me</a>
+            <a href="#projects">My Projects</a>
+            <a href="#links">Links</a>
+        </div>
+    </header>
+    <main>
+        <div id="about">
             <img src="https://www.gravatar.com/avatar/88a7ac03b956d2e189af6b3fa6dc6ebe?s=150" />
-            <h1>Sheinxy's Experimental Cave</h1>
-            <p>Welcome to my Experimental Cave! Here lie down many weird projects of my creation
-                all for your enjoyment!
-            </p>
-            <ul>
-                <li class="button"><a href="https://twitter.com/Sheinxy">Twitter</a></li>
-                <li class="button"><a href="https://github.com/Sheinxy">Github</a></li>
-                <li class="button"><a href="https://deviantart.com/Sheinxy">DeviantArt</a></li>
-                <li class="button"><a href="https://www.youtube.com/channel/UCsDms14VI1jZssfZFMheU2w">Youtube</a></li>
-            </ul>
-        </div>
-        <div id="allProjects" style="background-image: url('./images/all.png');">
             <div>
-                <h1>All projects:</h1>
-                <ul style="list-style-type: none;">
-                    <li class="button"><a href="./CatTranslator/">Cat Translator</a></li>
-                </ul>
+                <h1>Hewwow !</h1>
+                <p>
+                    My name is Sheinxy (Well, it's actually Raphaël, but whatever), and I am
+                    a 17 years old teenager, passionate about coding (and also drawing) !
+                    I mainly code in JS, Python and C#, though I am willing to learn more
+                    languages, as I enjoy doing so !
+                    However, I am but a mere amateur, and I still have a lot to learn ^w^'
+                </p>
             </div>
         </div>
-        <div id="recentProjects" style="background-image: url('./images/recent.png');">
-            <h1>Most recent project:</h1>
-            <div>
-                <iframe src="./CatTranslator/index.html" width="70%" height="70%" style="margin-top: 100px;"></iframe>
+        <div id="projects">
+            <div class="project">
+                <img src="./assets/projects/cat-translator.png" />
+                <div class="project-info">
+                    <h1>Cat Translator</h1>
+                    <p>A silly Cat Translator</p>
+                    <div class="project-links">
+                        <a href="./projects/Cat-Translator/index.html">Web</a>
+                        <a
+                            href="https://github.com/Sheinxy/Cat-Translator/releases/download/v2.1.1/Cat_Translator.apk">APK</a>
+                        <a href="https://github.com/Sheinxy/Cat-Translator">GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <div class="project">
+                <img src="./assets/projects/snaky.png" />
+                <div class="project-info">
+                    <h1>Snaky</h1>
+                    <p>A small emote Discord bot</p>
+                    <div class="project-links">
+                        <a
+                            href="https://discordapp.com/oauth2/authorize?client_id=455371839519064072&scope=bot&permissions=51200">Invite</a>
+                        <a href="https://github.com/Sheinxy/Snaky">GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <div class="project">
+                <img src="./assets/projects/mayou.png" />
+                <div class="project-info">
+                    <h1>Mayou</h1>
+                    <p>A Discord bot about my chubby cat</p>
+                    <div class="project-links">
+                        <a href="https://github.com/Sheinxy/Mayou">GitHub</a>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="nav" onclick="futureContent(-1)"><a>&lt;&lt;</a></div>
-    <div class="nav rightNav" onclick="futureContent(1)"><a>&gt;&gt;</a></div>
-    <div class="navList">
-        <ul>
-            <li class="button" onclick="changeContent('welcome')"><a>Welcome</a></li>
-            <li class="button" onclick="changeContent('allProjects')"><a>Projects</a></li>
-            <li class="button" onclick="changeContent('recentProjects')"><a>Recent</a></li>
-        </ul>
-    </div>
-    <script>
-        setup();
-        displayContent();
-    </script>
+    </main>
+    <footer id="links">
+        <h2>Watch me on:</h2>
+        <div>
+            <a href="https://twitter.com/Sheinxy">Twitter</a>
+            <a href="https://deviantart.com/Sheinxy">DeviantArt</a>
+            <a href="https://github.com/Sheinxy">GitHub</a>
+        </div>
+        <h3>
+            Icon by: <a href="https://deviantart.com/EmilyTheMeowth">EmilyTheMeowth</a>
+        </h3>
+    </footer>
 </body>
 
 </html>
