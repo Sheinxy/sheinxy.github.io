@@ -16,9 +16,10 @@
     <header>
         <img src="./assets/logo.png" />
         <div>
-            <a href="#about">About Me</a>
-            <a href="#projects">My Projects</a>
-            <a href="#links">Links</a>
+            <script src="./scripts/nav.js"></script>
+            <a onclick="navTo('#about');">About Me</a>
+            <a onclick="navTo('#projects');">My Projects</a>
+            <a onclick="navTo('#links');">Links</a>
         </div>
     </header>
     <main>
@@ -53,7 +54,7 @@
                 <img src="./assets/projects/snaky.png" />
                 <div class="project-info">
                     <h1>Snaky</h1>
-                    <p>A small emote Discord bot</p>
+                    <p>A small Discord emote bot</p>
                     <div class="project-links">
                         <a
                             href="https://discordapp.com/oauth2/authorize?client_id=455371839519064072&scope=bot&permissions=51200">Invite</a>
