@@ -27,21 +27,21 @@ header {
     z-index: 1;
 }
 
-header img {
+header>img {
     margin-left: 10px;
 
     width: 60px;
     height: 60px;
 }
 
-header div {
+header>div {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 
-header div a {
+header>div>a {
     padding: 0px 15px;
 
     text-decoration: none;
@@ -49,7 +49,7 @@ header div a {
     color: whitesmoke;
 }
 
-header div a:hover {
+header>div>a:hover {
     text-decoration: underline;
 
     color: whitesmoke;
@@ -161,7 +161,7 @@ header div a:hover {
     border-color: #bdc3c7;
 }
 
-.project-info p {
+.project-info>p {
     height: 40px;
 }
 
@@ -173,8 +173,7 @@ header div a:hover {
     flex-wrap: wrap;
 }
 
-.project-links a,
-#links>div>a {
+.project-links>a, #links>h3>a {
     padding: 10px;
 
     border-radius: 15px;
@@ -186,8 +185,7 @@ header div a:hover {
     text-decoration: none;
 }
 
-.project-links a:hover,
-#links>div>a:hover {
+.project-links>a:hover, #links>h3>a:hover {
     background-color: #e74c3c;
 
     color: #f1c40f;
@@ -197,7 +195,9 @@ header div a:hover {
     margin: 0px;
     padding: 5px;
 
-    background-color: #718093;
+    background-color: #000000;
+
+    filter: opacity(95%);
 
     display: flex;
     flex-direction: row;
@@ -205,11 +205,11 @@ header div a:hover {
     align-content: center;
     justify-content: center;
 
-    color: #f1c40f;
+    color: whitesmoke;
 }
 
 #links>div {
-    padding-top: 5px;
+    padding-top: 15px;
 
     width: 50%;
     height: 100%;
@@ -223,6 +223,15 @@ header div a:hover {
 
 #links>div>a {
     margin: 10px 0px;
+    text-decoration: none;
+
+    color: whitesmoke;
+}
+
+#links>div>a:hover {
+    text-decoration: underline;
+
+    color: whitesmoke;
 }
 
 #links>h3 {
