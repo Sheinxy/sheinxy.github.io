@@ -77,7 +77,7 @@ header>#nav>a:hover {
     cursor: pointer;
 }
 
-header>#nav>#invite {
+header>#nav>#invite, #about>div>a {
     padding: 10px 25px;
 
     border-radius: 25px;
@@ -89,7 +89,7 @@ header>#nav>#invite {
     text-decoration: none;
 }
 
-header>#nav>#invite:hover {
+header>#nav>#invite:hover, #about>div>a:hover {
     background-color: #e74c3c;
 
     color: #f1c40f;
