@@ -187,6 +187,13 @@
                     <li>Removes a command from this server or this user in case of a direct message</li>
                 </ul>
             </li>
+            <li>execute:
+                <ul>
+                    <li>Usage: execute &lt;command&gt;</li>
+                    <li>Executes an anonymous command, &lt;command&gt; can either be a single string or a Discord embed
+                        json.</li>
+                </ul>
+            </li>
         </ul>
         <p><span id="misc-commands"></span></p>
         <h6>Misc commands:</h6>
@@ -240,7 +247,8 @@
         <ul>
             <li>"before" and "after": sub custom commands that will be executed before and after the main command, they
                 can either be a single string or a json.</li>
-            <li>"vars": a dict containing all the variables as key-value pars (<code>`"vars": {"name": "value"}`</code>
+            <li>"vars": a dict or list containing all the variables as key-value paris (<code>"vars": {"name": "value"}</code> or <code>"vars": [{"name": "value"}]</code>)</br>
+                The lists and dicts can be nested as many time as needed </br>
                 This will be executed right after the "before" keyword.</li>
             <li>"nsfw": a boolean indicating if the command is nsfw or not, if true then this command will only be
                 executed in nsfw channels</li>
@@ -494,7 +502,7 @@
         </ul>
         <p>Enjoy !</p>
         <hr/>
-        <h6 style="text-align: center;">Snaky is in 5.4.1 - by <a href="https://sheinxy.github.io">Sheinxy</a></h6>
+        <h6 style="text-align: center;">Snaky is in 5.4.2 - by <a href="https://sheinxy.github.io">Sheinxy</a></h6>
     </article>
 </body>
 
