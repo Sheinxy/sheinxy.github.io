@@ -240,6 +240,8 @@
         <ul>
             <li>"before" and "after": sub custom commands that will be executed before and after the main command, they
                 can either be a single string or a json.</li>
+            <li>"vars": a dict containing all the variables as key-value pars (<code>`"vars": {"name": "value"}`</code>
+                This will be executed right after the "before" keyword.</li>
             <li>"nsfw": a boolean indicating if the command is nsfw or not, if true then this command will only be
                 executed in nsfw channels</li>
             <li>Other custom additional keys can also be used</li>
@@ -282,7 +284,7 @@
             <li>Gif: A function that returns a <a href="https://tenor.com/">Tenor</a> gif with given arguments, e.g
                 <code>$Gif(cat)</code> will return a gif of a cat</li>
             <li>Random: A function that returns a random number between a specified min and max (included), e.g
-                <code>$Random(3  5)</code> may return 3, 4 or 5<br>
+                <code>$Random(3, 5)</code> may return 3, 4 or 5<br>
                 The default max value is 1 and the default min value is 0</li>
             <li>Request: A function that will send a request to a specified url and return the result as a string</li>
             <li>Json: A function that will parse a string corresponding to a json object into a Python dict</li>
@@ -308,6 +310,12 @@
                 alt="usage">
             <em>example of a command that uses variables</em><br>
             <strong><em>/!\ Even when using a variable with a fixed value you must put () at the end /!\</em></strong></p>
+        <p>It is also possible to declare or change the value of a variable using the vars keyword.</p>
+        <p><img src="https://cdn.discordapp.com/attachments/499995405967425536/639436086447308801/unknown.png"
+            alt="example">
+        <img src="https://cdn.discordapp.com/attachments/499995405967425536/639436150213181450/unknown.png"
+            alt="usage">
+        <em>example of a command that uses variables, it works exactly as the previous one</em><br>
         <p><span id="custom-ex"></span></p>
         <h3>Examples</h3>
         <hr>
@@ -486,7 +494,7 @@
         </ul>
         <p>Enjoy !</p>
         <hr/>
-        <h6 style="text-align: center;">Snaky is in 5.4 - by <a href="https://sheinxy.github.io">Sheinxy</a></h6>
+        <h6 style="text-align: center;">Snaky is in 5.4.1 - by <a href="https://sheinxy.github.io">Sheinxy</a></h6>
     </article>
 </body>
 
