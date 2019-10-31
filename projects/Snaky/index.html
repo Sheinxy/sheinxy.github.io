@@ -124,21 +124,21 @@
             </li>
             <li>goodbye:
                 <ul>
-                    <li>Usage: goodbye &lt;channel_ID | default | none&gt;</li>
+                    <li>Usage: goodbye (channel| channel_name | channel_ID | default | none)</li>
                     <li>Changes the channel where Snaky will send a welcome/goodbye message when a member joins/leaves
                     </li>
                 </ul>
             </li>
             <li>disable:
                 <ul>
-                    <li>Usage: disable &lt;command&gt; &lt;role_ID&gt;</li>
+                    <li>Usage: disable &lt;command&gt; &lt;role|role_name|role_ID&gt;</li>
                     <li>Permissions: Administrator by default</li>
                     <li>Disables the usage of a command for a specific role</li>
                 </ul>
             </li>
             <li>enable:
                 <ul>
-                    <li>Usage: enable &lt;command&gt; &lt;role_ID&gt;</li>
+                    <li>Usage: enable &lt;command&gt; &lt;role|role_name|role_ID&gt;</li>
                     <li>Permissions: Administrator by default</li>
                     <li>Enables the usage of a command for a specific role</li>
                 </ul>
@@ -218,6 +218,7 @@
         <ul>
             <li><a href="#custom-creation">Creation of a command</a></li>
             <li><a href="#custom-meta">Using Snaky Tags</a></li>
+            <li><a href="#custom-vars">Using Variables</a></li>
             <li><a href="#custom-ex">Examples</a>
                 <ul>
                     <li><a href="#custom-ex-simple">Creating a Simple Emote</a></li>
@@ -241,6 +242,7 @@
                 can either be a single string or a json.</li>
             <li>"nsfw": a boolean indicating if the command is nsfw or not, if true then this command will only be
                 executed in nsfw channels</li>
+            <li>Other custom additional keys can also be used</li>
         </ul>
         <p><img src="https://cdn.discordapp.com/attachments/499994899404554261/638914311833649162/unknown.png"
                 alt="example">
@@ -279,12 +281,13 @@
             <li>Mentions: A list conatining all the user mentions of the message</li>
             <li>Gif: A function that returns a <a href="https://tenor.com/">Tenor</a> gif with given arguments, e.g
                 <code>$Gif(cat)</code> will return a gif of a cat</li>
-            <li>Random: A function that returns a random number between 0 and a specified max (included), e.g
-                <code>$Random(2)</code> may return 0, 1 or 2<br>
-                The default max value is 100</li>
+            <li>Random: A function that returns a random number between a specified min and max (included), e.g
+                <code>$Random(3  5)</code> may return 3, 4 or 5<br>
+                The default max value is 1 and the default min value is 0</li>
             <li>Request: A function that will send a request to a specified url and return the result as a string</li>
             <li>Json: A function that will parse a string corresponding to a json object into a Python dict</li>
             <li>Xml: A function that will parse a string corresponding to a xml object into a Python dict</li>
+            <li>NoReturn: A function that will return an empty string</li>
         </ul>
         <p><img src="https://cdn.discordapp.com/attachments/499994899404554261/638922343825145866/unknown.png"
                 alt="example">
@@ -293,6 +296,18 @@
             <em>example of a command that uses Snaky Tags</em><br>
             <strong><em>/!\ When using double quotes inside a json value, you must insert a <code>\</code> behind the
                     double quote /!\</em></strong></p>
+        <p><span id="custom-vars"></span></p>
+        <h3>Using Variables</h3>
+        <hr>
+        <p>It is possible to declare variable that can be used throughout the command.</br>
+            However a variable can only be declared once.</br>
+            To declare a variable, just do: <code>$Name(value)</code></p>
+        <p><img src="https://cdn.discordapp.com/attachments/499994899404554261/639333133946322974/unknown.png"
+                alt="example">
+            <img src="https://cdn.discordapp.com/attachments/499994899404554261/639333207807885331/unknown.png"
+                alt="usage">
+            <em>example of a command that uses variables</em><br>
+            <strong><em>/!\ Even when using a variable with a fixed value you must put () at the end /!\</em></strong></p>
         <p><span id="custom-ex"></span></p>
         <h3>Examples</h3>
         <hr>
@@ -397,8 +412,8 @@
                         alt="creation">
                     <img src="https://cdn.discordapp.com/attachments/499994899404554261/638930118252953600/unknown.png"
                         alt="usage">
-                    <em>Notice how the command still works even with an invalid argument: the Random tag defaults to 100 as the maximum
-                        when the passed parameter is invalid</em></p>
+                    <em>Notice how the command still works even with an invalid argument: the Random tag used to default to 100 as the maximum
+                        when the passed parameter is invalid, now it defaults at 1</em></p>
             </li>
         </ul>
         <p><span id="custom-ex-coin"></span></p>
@@ -471,7 +486,7 @@
         </ul>
         <p>Enjoy !</p>
         <hr/>
-        <h6 style="text-align: center;">Snaky is in 5.3 - by <a href="https://sheinxy.github.io">Sheinxy</a></h6>
+        <h6 style="text-align: center;">Snaky is in 5.4 - by <a href="https://sheinxy.github.io">Sheinxy</a></h6>
     </article>
 </body>
 
