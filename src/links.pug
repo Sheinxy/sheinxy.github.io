@@ -1,0 +1,16 @@
+mixin links(name, icon, link=null)
+    li.link
+        a(href=link)
+            img(src=icon)
+            span= name
+
+link(rel="stylesheet" href="./css/links.css")
+
+#links
+    h2 Links:
+    h4 (Where to find me on the internet)
+    ul
+        +links("Github", "./images/brands/github.png", "https://github.com/Sheinxy")
+        +links("Twitter", "./images/brands/twitter.svg", "https://twitter.com/Sheinxy")
+        +links("Youtube", "./images/brands/youtube.png", "https://www.youtube.com/channel/UCsDms14VI1jZssfZFMheU2w")
+        +links("Sheinxy#3596", "./images/brands/discord.svg")

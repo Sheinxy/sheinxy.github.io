@@ -1,0 +1,14 @@
+mixin navbar-item(icon="", text="", data)
+    li.nav-item(onclick=data.click)
+        a.nav-link(href=data.link id=data.id)
+            img.nav-icon(src=icon)
+            .link-text= text
+
+link(rel="stylesheet" href="./css/navbar.css")
+
+.navbar
+    ul.navbar-nav
+        +navbar-item("./images/icon.svg", "About", { link: "#about" })
+        +navbar-item("./images/nav/code.svg", "Projects", { link: "#projects" })
+        +navbar-item("./images/nav/link.svg", "Links", { link: "#links" })
+        +navbar-item("./images/nav/moon.svg", "Theme", { click:"switch_theme()", id: "theme-button" })

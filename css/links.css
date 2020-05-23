@@ -1,0 +1,46 @@
+#links {
+  text-align: center;
+}
+#links ul {
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style: none;
+}
+#links ul .link {
+  margin: 25px;
+  width: 150px;
+  height: 150px;
+  border-radius: 25px;
+  background-color: var(--secondary-color);
+}
+#links ul .link img {
+  padding: 10px;
+  width: auto;
+  height: 100px;
+  filter: grayscale(var(--grayscale)) invert(var(--img-invert));
+}
+#links ul .link a {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  color: var(--text-color);
+}
+#links ul .link a span:last-child {
+  margin: auto;
+}
+#links ul .link:hover {
+  background-color: var(--nav-primary-color);
+}
+#links ul .link:hover a {
+  color: var(--link-primary-color);
+  animation: scaleInLess 1s infinite alternate, hueRotate 4s infinite;
+}
