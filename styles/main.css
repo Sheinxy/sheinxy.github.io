@@ -29,7 +29,7 @@ h1 {
     font-size: 250%;
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 1000px) {
     .home-bg {
         width: 100vw;
         height: 0;
@@ -53,7 +53,7 @@ h1 {
     }
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 1000px) {
     .home-bg {
         display: none;
     }
