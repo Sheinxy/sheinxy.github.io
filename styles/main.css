@@ -30,11 +30,11 @@ h1 {
 }
 
 .home-bg {
-    width: 0;
+    width: 100vw;
     height: 0;
 
     font-size: 225px;
-    letter-spacing: 75px;
+    text-align: center;
 
     color: rgba(255, 255, 255, 0.2);
 
@@ -45,13 +45,11 @@ h1 {
     top: 0px;
     left: 0px;
 
+    display: flex;
+    flex-direction: column;
+
     z-index: -1;
 }
-
-.home-bg div {
-    width: 0;
-}
-
 .home {
     padding: 15%;
 
