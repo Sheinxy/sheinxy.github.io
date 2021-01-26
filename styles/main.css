@@ -29,27 +29,36 @@ h1 {
     font-size: 250%;
 }
 
-.home-bg {
-    width: 100vw;
-    height: 0;
+@media only screen and (min-width: 700px) {
+    .home-bg {
+        width: 100vw;
+        height: 0;
 
-    font-size: 225px;
-    text-align: center;
+        font-size: 225px;
+        text-align: center;
 
-    color: rgba(255, 255, 255, 0.2);
+        color: rgba(255, 255, 255, 0.2);
 
-    float: left;
-    user-select: none;
+        float: left;
+        user-select: none;
 
-    position: absolute;
-    top: 0px;
-    left: 0px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
 
-    display: flex;
-    flex-direction: column;
+        display: flex;
+        flex-direction: column;
 
-    z-index: -1;
+        z-index: -1;
+    }
 }
+
+@media only screen and (max-width: 700px) {
+    .home-bg {
+        display: none;
+    }
+}
+
 .home {
     padding: 15%;
 
