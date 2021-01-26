@@ -1,0 +1,78 @@
+.divider:hover {
+    cursor: pointer;
+}
+
+.custom-shape-divider-bottom-1611537128 {
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1611537128 svg {
+    position: relative;
+    display: block;
+
+    height: 122px;
+    width: calc(150% + 1.3px);
+    animation: 3s ease-in-out wave;
+}
+
+.custom-shape-divider-bottom-1611537128 .shape-fill {
+    fill: #FFFFFF;
+}
+
+.custom-shape-divider-top-1611598122 {
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1611598122 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 122px;
+    width: calc(150% + 1.3px);
+    transform: rotateY(180deg);
+
+    animation: 3s ease-in-out wave;
+}
+
+.custom-shape-divider-top-1611598122 .shape-fill {
+    fill: #FFFFFF;
+}
+
+.custom-shape-divider-bottom-1611619688 {
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1611619688 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+}
+
+.custom-shape-divider-bottom-1611619688 .shape-fill {
+    fill: #FFFFFF;
+}
+
+.custom-shape-divider-top-1611620794 {
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1611620794 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+}
+
+.custom-shape-divider-top-1611620794 .shape-fill {
+    fill: #FFFFFF;
+}
