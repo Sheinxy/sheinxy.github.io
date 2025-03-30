@@ -9,7 +9,9 @@ computer Bee Boop Beeep Boop Boop.
 On this page, you may find a few things about what I do, things that I want
 to share and stuff like that.
 
-# Advent Of Code
+# Things I do
+
+## [Advent Of Code](https://github.com/Sheinxy/Advent-Of-Code)
 
 Every year since 2020, I have partaken in the Advent Of Code.
 
@@ -18,13 +20,13 @@ for them [here](https://sheinxy.github.io/Advent-Of-Code).
 
 Most of the code can be found on my [github repository](https://github.com/Sheinxy/Advent-Of-Code)
 
-# SHNES
+## [SHNES](./SHNES)
 
 Also known as "Sheinxy's Haskell NES", a small project/challenge that I am currently working on,
 which is to make an emulator for the [NES](https://en.wikipedia.org/wiki/Nintendo_Entertainment_System)
 in Haskell.
 
-# [Blog](./blog)
+## [Blog](./blog)
 
 I believe that the best thing about having projects is learning from them.
 
