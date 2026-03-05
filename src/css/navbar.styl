@@ -1,0 +1,104 @@
+.navbar 
+    position fixed
+
+    z-index 1
+
+    background-color var(--nav-primary-color)
+
+.navbar-nav
+    display flex
+    justify-items center
+
+    padding 0
+    margin 0
+
+    width 100%
+    height 100%
+
+    list-style none
+
+    overflow hidden
+
+    .nav-item
+        .nav-link
+            display flex
+            align-items center
+            padding 15px
+
+            text-decoration none
+            font-size 35px
+
+            .nav-icon
+                filter grayscale(var(--grayscale))
+
+            .link-text
+                margin-left 7rem
+
+            &:active
+                transform scale(.75)
+
+    
+    .nav-item:hover
+        background-color var(--nav-secondary-color)
+
+        .nav-icon
+            animation scaleIn 1s infinite alternate, hueRotate 4s infinite
+
+        .link-text
+            animation scaleIn 1s infinite alternate
+
+
+@media only screen and (max-width 600px)
+    main
+        margin-bottom 100px
+
+        animation slideInFromTop 1s
+
+    .navbar
+        bottom 0
+        width 100vw
+        height 100px
+
+        animation slideInFromBottom 1s
+
+    .navbar-nav
+        flex-direction row
+        align-items center
+        justify-content space-around
+
+    .link-text
+        display none
+
+    .nav-icon
+        width 50px
+        height 50px
+
+@media only screen and (min-width 600px)
+    main
+        margin-left 100px
+
+        
+        animation slideInFromRight 1s
+
+    .navbar
+        top 0
+        margin-left 0
+        width 100px
+        height 100vh
+
+        animation slideInFromLeft 1s
+
+        transition width 1s ease-out
+
+    .navbar-nav
+        flex-direction column
+
+    .navbar:hover
+        width 450px
+
+    .nav-icon
+        width 75px
+        height 75px
+
+    .nav-item:last-child
+        margin-top auto

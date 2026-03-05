@@ -1,0 +1,64 @@
+mixin project(name, icon, description, links)
+    li.project
+        .project-info
+            img.project-image(src=icon)
+            .name-description
+                h3= name
+                p= description
+        .project-links
+            each link_data, link_name in links
+                a.link-button(href=link_data.url)
+                    if link_data.icon
+                        img(src=link_data.icon)
+                    .project-link= link_name
+
+link(rel="stylesheet" href="./css/projects.css")
+
+#projects
+    h2 Projects:
+    h4 (Hover/Tap to see more)
+    ul
+        +project("Snaky", "./images/projects/snaky.png", "A discord bot with a pinch of user customization", {
+                "Invite": {
+                    url: "https://discordapp.com/oauth2/authorize?client_id=455371839519064072&scope=bot&permissions=51200",
+                    icon: "./images/brands/discord.svg"
+                },
+                "Github": {
+                    url: "https://Github.com/Sheinxy/Snaky",
+                    icon: "./images/brands/github.png"
+                }
+            })
+        +project("Cat Translator", "./images/projects/cattranslator.png", "A silly cat translator made in javascript", {
+                "Web": {
+                    url: "https://cat-translator.glitch.me/",
+                    icon: "./images/projects/cattranslator.png"
+                },
+                "Github": {
+                    url: "https://Github.com/Sheinxy/Cat-Translator",
+                    icon: "./images/brands/github.png"
+                },
+                "APK": {
+                    url: "https://Github.com/Sheinxy/Cat-Translator/releases/download/v2.1.2/Cat_Translator.apk",
+                    icon: "./images/brands/android.svg"
+                }
+            })
+        +project("Walter", "./images/projects/walter.png", "Small Water-related Discord bot, with other funny stuff", {
+                "Invite": {
+                    url: "https://discordapp.com/api/oauth2/authorize?client_id=609906979883843584&permissions=0&scope=bot",
+                    icon: "./images/brands/discord.svg"
+                },
+                "Github": {
+                    url: "https://Github.com/Sheinxy/walter-the-cat",
+                    icon: "./images/brands/github.png"
+                }
+            })
+        +project("Mikedrop", "./images/icon.svg", "Web app to convert playlists between Spotify and Deezer", {
+                "Web": {
+                    url: "https://mikedrop.glitch.me/",
+                    icon: "./images/icon.svg"
+                },
+                "Github": {
+                    url: "https://Github.com/Sheinxy/mikedrop",
+                    icon: "./images/brands/github.png"
+                }
+            })
