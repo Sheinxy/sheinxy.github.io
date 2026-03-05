@@ -473,16 +473,14 @@
                         Though, we want Snaky to either say "Heads" or "Tails" and not 0 and 1.<br>
                         In order to do that, we could use a list of length 2, <code>["Heads", "Tails"]</code> and take a
                         random element of this list.<br>
-                        In order to create the list, we'll have to use the Json tag like this: <code>$Json(["Heads",
-                            "Tails"])</code><br>
                         Then we need to take a random element from it:<br>
-                        <code>$Json(["Heads", "Tails"])($Random(1))</code></p>
+                        <code>$Choice(["Heads", "Tails"])</code></p>
                     <p>Our define command now looks like this:<br>
-                        <code>-define coin $Json(["Heads", "Tails"])($Random(1))</code></p>
+                        <code>-define coin $Choice(["Heads", "Tails"])</code></p>
                     <p>Let's try creating and using this command:
-                        <img src="https://cdn.discordapp.com/attachments/499994899404554261/638933624288313354/unknown.png"
+                        <img src="https://cdn.discordapp.com/attachments/638913919515230228/640604158357143552/unknown.png"
                             alt="creation">
-                        <img src="https://cdn.discordapp.com/attachments/499994899404554261/638933661776871425/unknown.png"
+                        <img src="https://cdn.discordapp.com/attachments/499994899404554261/640604201180725278/unknown.png"
                             alt="usage"></p>
                 </li>
             </ul>
