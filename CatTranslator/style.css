@@ -1,6 +1,5 @@
 body {
-    margin-top: 0px;
-    margin-left: 0px;
+    margin: 0px;
 
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
@@ -9,14 +8,14 @@ header {
     padding: 10px;
     margin-bottom: 5px;
 
-    width: 100vw;
+    width: 100%;
     height: 60px;
     box-sizing: border-box;
 
     border-bottom-style: solid;
     border-bottom-width: 1px;
 
-    
+
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -51,13 +50,11 @@ header button {
 
 header button:hover {
     background-color: indigo;
-    
+
     color: burlywood;
 }
 
-main {  
-    margin-left: 8px;
-
+main {
     height: 78vh;
 
     display: flex;
@@ -81,6 +78,6 @@ footer {
     text-align: center;
 }
 
-footer a{
+footer a {
     color: cadetblue;
 }
