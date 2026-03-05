@@ -1,4 +1,135 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Sheinxy's experimental cave</title><link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&amp;display=swap" rel="stylesheet"><link rel="stylesheet" href="./css/animations.css"><link rel="stylesheet" href="./css/themes.css"><link rel="stylesheet" href="./css/style.css"><link rel="icon" href="./images/icon.svg" type="image/svg+xml"><script src="./js/theme.js" defer></script></head><body><link rel="stylesheet" href="./css/navbar.css"><div class="navbar"><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="#about"><img class="nav-icon" src="./images/icon.svg"><div class="link-text">About</div></a></li><li class="nav-item"><a class="nav-link" href="#projects"><img class="nav-icon" src="./images/nav/code.svg"><div class="link-text">Projects</div></a></li><li class="nav-item"><a class="nav-link" href="#links"><img class="nav-icon" src="./images/nav/link.svg"><div class="link-text">Links</div></a></li><li class="nav-item" onclick="switch_theme()"><a class="nav-link" id="theme-button"><img class="nav-icon" src="./images/nav/moon.svg"><div class="link-text">Theme</div></a></li></ul></div><main><link rel="stylesheet" href="./css/about.css"><div id="about"><img src="./images/icon.svg"><h1>Sheinxy</h1><h2>Doing things differently since 2002</h2><p>Born and raised in France, I have been fascinated by computers for my whole life;
-Hence, it was only a matter of time before I started coding.</br>
-Passionate about new technologies, always willing to learn new things and challenge myself.</br>
-I am currently studying computer science at the <a href="https://epita.fr">Epita</a></p></div><link rel="stylesheet" href="./css/projects.css"><div id="projects"><h2>Projects:</h2><h4>(Hover/Tap to see more)</h4><ul><li class="project"><div class="project-info"><img class="project-image" src="./images/projects/snaky.png"><div class="name-description"><h3>Snaky</h3><p>A discord bot with a pinch of user customization</p></div></div><div class="project-links"><a class="link-button" href="https://discordapp.com/oauth2/authorize?client_id=455371839519064072&amp;scope=bot&amp;permissions=51200"><img src="./images/brands/discord.svg"><div class="project-link">Invite</div></a><a class="link-button" href="https://github.com/Sheinxy/Snaky"><img src="./images/brands/github.png"><div class="project-link">Github</div></a></div></li><li class="project"><div class="project-info"><img class="project-image" src="./images/projects/cat-translator.svg"><div class="name-description"><h3>Cat Translator</h3><p>A silly cat translator made in javascript</p></div></div><div class="project-links"><a class="link-button" href="https://cat-translator.glitch.me/"><img src="./images/projects/cat-translator.svg"><div class="project-link">Web</div></a><a class="link-button" href="https://github.com/Sheinxy/cat-translator"><img src="./images/brands/github.png"><div class="project-link">Github</div></a><a class="link-button" href="https://github.com/Sheinxy/Cat-Translator/releases/download/v2.1.2/Cat_Translator.apk"><img src="./images/brands/android.svg"><div class="project-link">APK</div></a></div></li><li class="project"><div class="project-info"><img class="project-image" src="./images/projects/walter.png"><div class="name-description"><h3>Walter</h3><p>Small Water-related Discord bot, with other funny stuff</p></div></div><div class="project-links"><a class="link-button" href="https://discordapp.com/api/oauth2/authorize?client_id=609906979883843584&amp;permissions=0&amp;scope=bot"><img src="./images/brands/discord.svg"><div class="project-link">Invite</div></a><a class="link-button" href="https://github.com/Sheinxy/walter-the-cat"><img src="./images/brands/github.png"><div class="project-link">Github</div></a></div></li><li class="project"><div class="project-info"><img class="project-image" src="./images/icon.svg"><div class="name-description"><h3>Mikedrop</h3><p>Web app to convert playlists between Spotify and Deezer</p></div></div><div class="project-links"><a class="link-button" href="https://mikedrop.glitch.me/"><img src="./images/icon.svg"><div class="project-link">Web</div></a><a class="link-button" href="https://github.com/Sheinxy/mikedrop"><img src="./images/brands/github.png"><div class="project-link">Github</div></a></div></li></ul></div><link rel="stylesheet" href="./css/links.css"><div id="links"><h2>Links:</h2><h4>(Where to find me on the internet)</h4><ul><li class="link"><a href="https://github.com/Sheinxy"><img src="./images/brands/github.png"><span>Github</span></a></li><li class="link"><a href="https://twitter.com/Sheinxy"><img src="./images/brands/twitter.svg"><span>Twitter</span></a></li><li class="link"><a href="https://www.youtube.com/channel/UCsDms14VI1jZssfZFMheU2w"><img src="./images/brands/youtube.png"><span>Youtube</span></a></li><li class="link"><a><img src="./images/brands/discord.svg"><span>Sheinxy#3596</span></a></li></ul></div></main></body></html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sheinxy's experimental cave</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/animations.css">
+    <link rel="stylesheet" href="./css/themes.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="./images/icon.svg" type="image/svg+xml">
+    <script src="./js/theme.js" defer></script>
+</head>
+
+<body>
+    <link rel="stylesheet" href="./css/navbar.css">
+    <div class="navbar">
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="#about"><img class="nav-icon" src="./images/icon.svg">
+                    <div class="link-text">About</div>
+                </a></li>
+            <li class="nav-item"><a class="nav-link" href="#projects"><img class="nav-icon" src="./images/nav/code.svg">
+                    <div class="link-text">Projects</div>
+                </a></li>
+            <li class="nav-item"><a class="nav-link" href="#links"><img class="nav-icon" src="./images/nav/link.svg">
+                    <div class="link-text">Links</div>
+                </a></li>
+            <li class="nav-item" onclick="switch_theme()"><a class="nav-link" id="theme-button"><img class="nav-icon"
+                        src="./images/nav/moon.svg">
+                    <div class="link-text">Theme</div>
+                </a></li>
+        </ul>
+    </div>
+    <main>
+        <link rel="stylesheet" href="./css/about.css">
+        <div id="about"><img src="./images/icon.svg">
+            <h1>Sheinxy</h1>
+            <h2>Doing things differently since 2002</h2>
+            <p>Born and raised in France, I have been fascinated by computers for my whole life;
+                Hence, it was only a matter of time before I started coding.</br>
+                Passionate about new technologies, always willing to learn new things and challenge myself.</br>
+                I am currently studying computer science at the <a href="https://epita.fr">Epita</a></p>
+        </div>
+        <link rel="stylesheet" href="./css/projects.css">
+        <div id="projects">
+            <h2>Projects:</h2>
+            <h4>(Hover/Tap to see more)</h4>
+            <ul>
+                <li class="project">
+                    <div class="project-info"><img class="project-image" src="./images/projects/snaky.png">
+                        <div class="name-description">
+                            <h3>Snaky</h3>
+                            <p>A discord bot with a pinch of user customization</p>
+                        </div>
+                    </div>
+                    <div class="project-links"><a class="link-button"
+                            href="https://discordapp.com/oauth2/authorize?client_id=455371839519064072&amp;scope=bot&amp;permissions=51200"><img
+                                src="./images/brands/discord.svg">
+                            <div class="project-link">Invite</div>
+                        </a><a class="link-button" href="https://github.com/Sheinxy/Snaky"><img
+                                src="./images/brands/github.png">
+                            <div class="project-link">Github</div>
+                        </a></div>
+                </li>
+                <li class="project">
+                    <div class="project-info"><img class="project-image" src="./images/projects/cat-translator.svg">
+                        <div class="name-description">
+                            <h3>Cat Translator</h3>
+                            <p>A silly cat translator made in javascript</p>
+                        </div>
+                    </div>
+                    <div class="project-links"><a class="link-button" href="https://cat-translator.glitch.me/"><img
+                                src="./images/projects/cat-translator.svg">
+                            <div class="project-link">Web</div>
+                        </a><a class="link-button" href="https://github.com/Sheinxy/cat-translator"><img
+                                src="./images/brands/github.png">
+                            <div class="project-link">Github</div>
+                        </a><a class="link-button"
+                            href="https://github.com/Sheinxy/Cat-Translator/releases/download/v2.1.2/Cat_Translator.apk"><img
+                                src="./images/brands/android.svg">
+                            <div class="project-link">APK</div>
+                        </a></div>
+                </li>
+                <li class="project">
+                    <div class="project-info"><img class="project-image" src="./images/projects/walter.png">
+                        <div class="name-description">
+                            <h3>Walter</h3>
+                            <p>Small Water-related Discord bot, with other funny stuff</p>
+                        </div>
+                    </div>
+                    <div class="project-links"><a class="link-button"
+                            href="https://discordapp.com/api/oauth2/authorize?client_id=609906979883843584&amp;permissions=0&amp;scope=bot"><img
+                                src="./images/brands/discord.svg">
+                            <div class="project-link">Invite</div>
+                        </a><a class="link-button" href="https://github.com/Sheinxy/walter-the-cat"><img
+                                src="./images/brands/github.png">
+                            <div class="project-link">Github</div>
+                        </a></div>
+                </li>
+                <li class="project">
+                    <div class="project-info"><img class="project-image" src="./images/icon.svg">
+                        <div class="name-description">
+                            <h3>Mikedrop</h3>
+                            <p>Web app to convert playlists between Spotify and Deezer</p>
+                        </div>
+                    </div>
+                    <div class="project-links"><a class="link-button" href="https://mikedrop.glitch.me/"><img
+                                src="./images/icon.svg">
+                            <div class="project-link">Web</div>
+                        </a><a class="link-button" href="https://github.com/Sheinxy/mikedrop"><img
+                                src="./images/brands/github.png">
+                            <div class="project-link">Github</div>
+                        </a></div>
+                </li>
+            </ul>
+        </div>
+        <link rel="stylesheet" href="./css/links.css">
+        <div id="links">
+            <h2>Links:</h2>
+            <h4>(Where to find me on the internet)</h4>
+            <ul>
+                <li class="link"><a href="https://github.com/Sheinxy"><img
+                            src="./images/brands/github.png"><span>Github</span></a></li>
+                <li class="link"><a href="https://twitter.com/Sheinxy"><img
+                            src="./images/brands/twitter.svg"><span>Twitter</span></a></li>
+                <li class="link"><a href="https://www.youtube.com/channel/UCsDms14VI1jZssfZFMheU2w"><img
+                            src="./images/brands/youtube.png"><span>Youtube</span></a></li>
+                <li class="link"><a><img src="./images/brands/discord.svg"><span>Sheinxy#3596</span></a></li>
+            </ul>
+        </div>
+    </main>
+</body>
+
+</html>
