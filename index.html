@@ -1,117 +1,105 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="https://sheinxy.github.io/" />
-    <meta name="twitter:title" content="Sheinxy's Experimental Cave" />
-    <meta name="twitter:description" content="A weird place run by a weird cat" />
-    <meta name="twitter:image" content="https://raw.githubusercontent.com/Sheinxy/sheinxy.github.io/master/assets/logo.png" />
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <link rel="stylesheet" href="./style.css" />
-    <link rel="icon" href="./assets/logo.png" />
-
-    <title>Sheinxy's Experimental Cave</title>
-</head>
-
-<body>
-    <header>
-        <img src="./assets/logo.png" />
-        <div>
-            <script src="./scripts/nav.js"></script>
-            <a onclick="navTo('#about');">About</a>
-            <a onclick="navTo('#projects');">Projects</a>
-            <a onclick="navTo('#links');">Links</a>
-        </div>
-    </header>
-    <main>
-        <div id="about">
-            <img src="https://www.gravatar.com/avatar/88a7ac03b956d2e189af6b3fa6dc6ebe?s=150" />
-            <div>
-                <h1>Hewwow !</h1>
-                <p>
-                    I am Sheinxy | Raphaël, a self-proclaimed and self-taught
-                    developper and beginner artist. I actually am a high-schooler,
-                    as I am only 17 years old.
-                    I am a he/him, but it's okay if you get this wrong, don't worry too much ^w^.
-                </p>
-            </div>
-        </div>
-        <div id="projects">
-            <div class="project">
-                <img src="./assets/projects/cat-translator.png" />
-                <div class="project-info">
-                    <h1>Cat Translator</h1>
-                    <p>A silly Cat Translator</p>
-                    <div class="project-links">
-                        <a href="./projects/Cat-Translator/">Web</a>
-                        <a
-                            href="https://github.com/Sheinxy/Cat-Translator/releases/download/v2.1.2/Cat_Translator.apk">APK</a>
-                        <a href="https://github.com/Sheinxy/Cat-Translator">GitHub</a>
-                    </div>
-                </div>
-            </div>
-            <div class="project">
-                <img src="./assets/projects/snaky.png" />
-                <div class="project-info">
-                    <h1>Snaky</h1>
-                    <p>Discord Bot with a pinch of user customisation</p>
-                    <div class="project-links">
-                        <a href="./projects/Snaky/">Web</a>
-                        <a
-                            href="https://discordapp.com/oauth2/authorize?client_id=455371839519064072&scope=bot&permissions=51200">Invite</a>
-                        <a href="https://github.com/Sheinxy/Snaky">GitHub</a>
-                    </div>
-                </div>
-            </div>
-            <div class="project">
-                <img src="./assets/projects/walter.jpg" />
-                <div class="project-info">
-                    <h1>Walter</h1>
-                    <p>Small Water-related Discord bot, with other funny stuff</p>
-                    <div class="project-links">
-                        <a href="https://glitch.com/~walter-the-cat">Glitch</a>
-                        <a href="https://discordapp.com/api/oauth2/authorize?client_id=609906979883843584&permissions=0&scope=bot">Invite</a>
-                        <a href="https://github.com/Sheinxy/Walter-the-cat">GitHub</a>
-                    </div>
-                </div>
-            </div>
-            <div class="project">
-                <img src="./assets/projects/mastermind.jpg" />
-                <div class="project-info">
-                    <h1>Python Mastermind</h1>
-                    <p>A Python Mastermind in the Python Console</p>
-                    <div class="project-links">
-                        <a href="https://github.com/Sheinxy/Python-Mastermind">GitHub</a>
-                    </div>
-                </div>
-            </div>
-        	<div class="project">
-                <img src="./assets/projects/acdays.png" />
-                <div class="project-info">
-                    <h1>New Horizons Countdown</h1>
-                    <p>Countdown for AC:New Horizons</p>
-                    <div class="project-links">
-                        <a href="./projects/ACDays">Web</a>
-                    </div>
-                </div>
-            </div>
+<html>
+	<head>
+		<link href="https://fonts.googleapis.com/css?family=Dosis&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="./animations.css"/>
+		<link rel="stylesheet" href="./style.css"/>
+		<link rel="icon" href="./images/icon.png"/>
+		<title>Sheinxy's place</title>
+	</head>
+	<body>
+		<div class="header">
+			<img class="logo" src="./images/icon.png">
+			<h1 class="quote">Sheinxy's place</h1>
 		</div>
-    </main>
-    <footer id="links">
-        <h2>Watch me on:</h2>
-        <div>
-            <a href="https://twitter.com/Sheinxy">Twitter</a>
-            <a href="https://deviantart.com/Sheinxy">DeviantArt</a>
-            <a href="https://github.com/Sheinxy">GitHub</a>
-        </div>
-        <h3>
-            Icon by: <a href="https://deviantart.com/EmilyTheMeowth">EmilyTheMeowth</a>
-        </h3>
-    </footer>
-</body>
-
+		<div class="about">
+			<div class="bio">
+				<p>
+					Hi! My name is Sheinxy, I am a 17 years old French boyo!</br>
+			I am a full time math enthusiast who codes and draws on his spare time !</br>
+			Here you'll find some projects that I made on my free time!</br>
+			You'll also find links to my different social medias!</br>
+			My icon was made by <a href="https://twitter.com/Sealspirits">SealSpirits</a> (She's very talented!)
+			</p>
+			</div>
+			<div class="links">	
+				<div class="link">	
+					<img class="link-image" src="./images/links/twitter.png"/>
+					<a href="#" class="link-site">Twitter</a>
+				</div>
+				<div class="link">	
+					<img class="link-image" src="./images/links/github.png"/>
+					<a href="#" class="link-site">Github</a>
+				</div>
+				<div class="link">	
+					<img class="link-image" src="./images/links/deviantart.png"/>
+					<a href="#" class="link-site">DeviantArt</a>
+				</div>
+				<div class="link">	
+					<img class="link-image" src="./images/links/youtube.png"/>
+					<a href="#" class="link-site">Youtube</a>
+				</div>
+			</div>
+		</div>
+		<div class="projects">
+			<div class="project">
+				<div class="project-main-info">
+					<img class="project-image" src="./images/projects/cattranslator.png"/>
+					<h2>Cat Translator</h2>
+				</div>
+				<div class="project-info">
+					<p>
+						A silly cat translator!</br></br>
+						Enter any human text and get its translation in a pseudo-cat language!</br>
+						Enter any pseudo-cat language text and get its human equivalent!</br>
+						Handcrafted with love and Javascript, this silly program can be used with any browser!</br>
+						An Android Cordova app is also available to translate offline and on the go!
+					</p>
+					<div class="project-info-buttons">
+						<a href="https://cat-translator.glitch.me/" class="project-button">Web</a>
+						<a href="https://github.com/Sheinxy/Cat-Translator" class="project-button">GitHub</a>
+						<a href="https://github.com/Sheinxy/Cat-Translator/releases/download/v2.1.2/Cat_Translator.apk" class="project-button">Android</a>
+					</div>
+				</div>
+			</div>
+			<div class="project">
+				<div class="project-main-info">
+					<img class="project-image" src="./images/projects/snaky.png"/>
+					<h2>Snaky</h2>
+				</div>
+				<div class="project-info">
+					<p>
+						A discord bot with a pinch of user customization!</br></br>
+						This is Snake "Snaky" Info, a discord bot and my longest running project!</br>
+						Snaky allows you to create custom commands using JSON and some meta-coding!</br>
+						Beautifully crafted in python using discord.py, Snaky is a project that matters a lot to me!</br>
+						Snaky is currently in version 5.5
+					</p>
+					<div class="project-info-buttons">
+						<a href="https://discordapp.com/oauth2/authorize?client_id=455371839519064072&scope=bot&permissions=51200" class="project-button">Invite</a>
+						<a href="https://github.com/Sheinxy/Snaky" class="project-button">GitHub</a>
+						<a href="#" class="project-button">Help</a>
+					</div>
+				</div>
+			</div>
+			<div class="project">
+				<div class="project-main-info">
+					<img class="project-image" src="./images/projects/walter.png"/>
+					<h2>Walter</h2>
+				</div>
+				<div class="project-info">
+					<p>
+						A water loving cat!</br></br>
+						Walter the Cat is a small discord bot which main purpose is to send daily reminders to drink water!</br>
+						Lovingly made in Javascript using discord.js, Walter is a young but promising project!</br>
+						Still in version 1.2, many new features might come with time!</br>
+						Walter's icon was made by the amazing <a href="https://twitter.com/Sealspirits">SealSpirits</a>!
+					</p>
+					<div class="project-info-buttons">
+						<a href="https://discordapp.com/api/oauth2/authorize?client_id=609906979883843584&permissions=0&scope=bot" class="project-button">Invite</a>
+						<a href="https://github.com/Sheinxy/Walter-the-cat" class="project-button">GitHub</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
 </html>
