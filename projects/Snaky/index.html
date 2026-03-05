@@ -231,7 +231,7 @@
             <a href="https://discordapp.com/developers/docs/resources/channel#embed-object">Discord Embed</a>.<br>
             Furthermore, if a json is used, can also be added the following keys to the json:</p>
         <ul>
-            <li>"before" and "after": sub custom commands that will be executed before and after the main command, the
+            <li>"before" and "after": sub custom commands that will be executed before and after the main command, they
                 can either be a single string or a json.</li>
             <li>"nsfw": a boolean indicating if the command is nsfw or not, if true then this command will only be
                 executed in nsfw channels</li>
@@ -315,7 +315,7 @@
                 <h6>Let's now think about what we need to put inside our image:</h6>
                 <hr>
                 <p>For this image, we only really need a simple url,
-                    "https://clipground.com/images/watery-heart-clipart-8.jpg" could do the trick.<br>
+                    "https://cdn.pixabay.com/photo/2017/01/23/07/58/heart-2001744_640.png" could do the trick.<br>
                     We can thus say:</p>
                 <pre><code class="language-js"><span class="hljs-string">            "image"</span>: {
                 <span class="hljs-string">"url"</span>: <span class="hljs-string">"https://cdn.pixabay.com/photo/2017/01/23/07/58/heart-2001744_640.png"</span>
@@ -344,7 +344,7 @@
                 <hr>
                 <p>Being able to send the same heart over and over again is good, but what if we wanted to send a random
                     gif instead ?<br>
-                    This is where the Gif tag intervenes !</p>
+                    This is where the Gif tag intervienes !</p>
                 <p>If we take our previous "image" from the json:</p>
                 <pre><code class="language-js"><span class="hljs-string">            "image"</span>: {
                 <span class="hljs-string">"url"</span>: <span class="hljs-string">"https://cdn.pixabay.com/photo/2017/01/23/07/58/heart-2001744_640.png"</span>
@@ -353,8 +353,8 @@
                 <p>We'd like to have a different url corresponding to a gif that shows love each time.<br>
                     In order to do that, we could do <code>$Gif(love heart)</code>, to search for a gif from <a
                         href="https://tenor.com">Tenor</a> with "love heart" as a search query, giving us:</p>
-                <pre><code class="language-js">{
-                <span class="hljs-string">            "description"</span>: <span class="hljs-string">"I love you $Mentions(all)"</span>,
+                <pre><code class="language-js">            {
+                <span class="hljs-string">"description"</span>: <span class="hljs-string">"I love you $Mentions(all)"</span>,
                 <span class="hljs-string">"image"</span>: {
                     <span class="hljs-string">"url"</span>: <span class="hljs-string">"$Gif(love heart)"</span>
                 }
@@ -391,7 +391,7 @@
                         alt="creation">
                     <img src="https://cdn.discordapp.com/attachments/499994899404554261/638930118252953600/unknown.png"
                         alt="usage">
-                    <em>Notice how the command still works even with an invalid argument: the Random tag defaults to 100
+                    <em>Notice how the command still works even with an invalid argument: the Random tag defaults to 100 as the maximum
                         when the passed parameter is invalid</em></p>
             </li>
         </ul>
