@@ -9,7 +9,7 @@ if (androidVersion && androidVersion[0] < 7) {
     const scriptTags = document.querySelectorAll("script");
 
     for (var i = 0; i < scriptTags.length; i++) {
-        if (scriptTags[i].src.indexOf("/scripts/android.js") == -1) {
+        if (scriptTags[i].src.indexOf("/scripts/compatibility.js") == -1 && scriptTags[i].src.indexOf("/scripts/mobile.js") == -1) {
             var parent = scriptTags[i].parentNode;
             var newTag = document.createElement("script");
             newTag.src = scriptTags[i].src.replace("scripts", "scripts/old-devices");
