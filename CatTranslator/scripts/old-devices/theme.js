@@ -1,5 +1,5 @@
-const theme = document.querySelector("#theme");
-const button = document.querySelector("#themeButton");
+var theme = document.querySelector("#theme");
+var button = document.querySelector("#themeButton");
 
 var current = getCookie('theme') ? getCookie('theme') : 'light';
 theme.href = './styles/' + current + '.css';
