@@ -6,7 +6,8 @@
     <meta name="twitter:site" content="https://sheinxy.github.io/projects/Snaky" />
     <meta name="twitter:title" content="Snaky" />
     <meta name="twitter:description" content="Discord Bot with a pinch of user customisation" />
-    <meta name="twitter:image" content="https://raw.githubusercontent.com/Sheinxy/sheinxy.github.io/master/assets/projects/snaky.png" />
+    <meta name="twitter:image"
+        content="https://raw.githubusercontent.com/Sheinxy/sheinxy.github.io/master/assets/projects/snaky.png" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -79,12 +80,13 @@
                 <a href="#invite">Invite</a>
                 <a href="#commands">Commands</a>
                 <a href="#custom">Customization</a>
+                <a href="#bank">Bank</a>
             </div>
         </div>
         <p><span id="about"></span></p>
         <h1>What is Snaky ?</h1>
         <blockquote>
-            <p>Snaky was created in november 2017 as a bot for my friends' discord server.
+            <p>Snaky was created in november 2017 as a bot for my friends' discord guild.
                 At first, it didn't have much success, but with some time and new commands, it started getting some use.
             </p>
         </blockquote>
@@ -92,10 +94,10 @@
             This bot is aimed at allowing users to create themselves custom commands, especially emotes, as well as some
             other few things.</p>
         <p><span id="invite"></span></p>
-        <h1>How to add Snaky to my server ?</h1>
-        <p>You can invite Snaky to your server using the following link:
+        <h1>How to add Snaky to my guild ?</h1>
+        <p>You can invite Snaky to your guild using the following link:
             <a href="https://discordapp.com/oauth2/authorize?client_id=455371839519064072&amp;scope=bot">Invite Snaky to
-                your server</a></p>
+                your guild</a></p>
         <p><span id="commands"></span></p>
         <h1>Commands</h1>
         <h5>Snaky's base prefix is -</h5>
@@ -146,19 +148,19 @@
             <li>prefix:
                 <ul>
                     <li>Usage: prefix</li>
-                    <li>Displays Snaky's usable prefixes for this server</li>
+                    <li>Displays Snaky's usable prefixes for this guild</li>
                 </ul>
             </li>
             <li>add_prefix:
                 <ul>
                     <li>Usage: add_prefix &lt;prefix&gt;</li>
-                    <li>Adds a prefix to this server</li>
+                    <li>Adds a prefix to this guild</li>
                 </ul>
             </li>
             <li>del_prefix:
                 <ul>
                     <li>Usage: del_prefix &lt;prefix&gt;</li>
-                    <li>Removes a prefix from this server</li>
+                    <li>Removes a prefix from this guild</li>
                 </ul>
             </li>
         </ul>
@@ -169,22 +171,22 @@
             <li>commands:
                 <ul>
                     <li>Usage: commands (name)</li>
-                    <li>Displays either the avalaible custom commands on this server, or the content of a custom command
+                    <li>Displays either the avalaible custom commands on this guild, or the content of a custom command
                         if one is specified</li>
                 </ul>
             </li>
             <li>define:
                 <ul>
                     <li>Usage: define &lt;name&gt; &lt;command&gt;</li>
-                    <li>Adds a command to this server, &lt;command&gt; can either be a single string or a Discord embed
+                    <li>Adds a command to this guild, &lt;command&gt; can either be a single string or a Discord embed
                         json, if used in direct messages this will add the command to the user's commands, which will
-                        allow him to use it on any server, if he has the foreign emojis permission</li>
+                        allow him to use it on any guild, if he has the foreign emojis permission</li>
                 </ul>
             </li>
             <li>undefine:
                 <ul>
                     <li>Usage: undefine &lt;name&gt;</li>
-                    <li>Removes a command from this server or this user in case of a direct message</li>
+                    <li>Removes a command from this guild or this user in case of a direct message</li>
                 </ul>
             </li>
             <li>execute:
@@ -207,13 +209,13 @@
             </li>
             <li>quote:
                 <ul>
-                    <li>Usage: quote &lt;public|server&gt;</li>
+                    <li>Usage: quote &lt;public|guild&gt;</li>
                     <li>Gives out a quote from the specified scope</li>
                 </ul>
             </li>
             <li>add_quote:
                 <ul>
-                    <li>Usage: quote &lt;public|server&gt; &lt;quote&gt;</li>
+                    <li>Usage: quote &lt;public|guild&gt; &lt;quote&gt;</li>
                     <li>Adds out a quote to the specified scope</li>
                 </ul>
             </li>
@@ -247,11 +249,13 @@
         <ul>
             <li>"before" and "after": sub custom commands that will be executed before and after the main command, they
                 can either be a single string or a json.</li>
-            <li>"vars": a dict or list containing all the variables as key-value paris (<code>"vars": {"name": "value"}</code> or <code>"vars": [{"name": "value"}]</code>)</br>
+            <li>"vars": a dict or list containing all the variables as key-value pairs (<code>"vars": {"name":
+                    "value"}</code> or <code>"vars": [{"name": "value"}]</code>)</br>
                 The lists and dicts can be nested as many time as needed </br>
                 This will be executed right after the "before" keyword.</li>
             <li>"nsfw": a boolean indicating if the command is nsfw or not, if true then this command will only be
                 executed in nsfw channels</li>
+            <li>"error": a sub-command that will be executed when an error occurs</li>
             <li>Other custom additional keys can also be used</li>
         </ul>
         <p><img src="https://cdn.discordapp.com/attachments/499994899404554261/638914311833649162/unknown.png"
@@ -286,19 +290,35 @@
                     href="https://discordpy.readthedocs.io/en/latest/api.html?highlight=presence#user">Discord User</a>
                 or <a href="https://discordpy.readthedocs.io/en/latest/api.html?highlight=presence#member">Guild
                     Member</a> who invoked the command</li>
+            <li>Guild: The <a
+                    href="https://discordpy.readthedocs.io/en/latest/api.html?highlight=presence#guild">Guild</a>
+                in which the message was sent</li>
             <li>Arguments: A string containing the arguments entered by the author (i.e everything that isn't the
                 command name nor the prefix)</li>
             <li>Mentions: A list conatining all the user mentions of the message</li>
             <li>Gif: A function that returns a <a href="https://tenor.com/">Tenor</a> gif with given arguments, e.g
                 <code>$Gif(cat)</code> will return a gif of a cat</li>
+            <li>Request: A function that will send a request to a specified url and return the result as a string</li>
             <li>Random: A function that returns a random number between a specified min and max (included), e.g
                 <code>$Random(3, 5)</code> may return 3, 4 or 5<br>
                 The default max value is 1 and the default min value is 0</li>
-            <li>Request: A function that will send a request to a specified url and return the result as a string</li>
+            <li>Choice: A function that will return a random element from a population of elements</li>
+            <li>Choices: A function that will return k random elements from a population of elements<br>
+                Usage is: <code>$Choices({"population": ["a", "b", "c"], "k": 2})</code></li>
+            <li>Len: Equivalent to Python's len, returns the length of an element</li>
+            <li>List, Str, Int: Equivalents to Python's list, str and int, converts a value into the according type</li>
             <li>Json: A function that will parse a string corresponding to a json object into a Python dict</li>
             <li>Xml: A function that will parse a string corresponding to a xml object into a Python dict</li>
-            <li>NoReturn: A function that will return an empty string</li>
-            <li>Tags: A dict containing all the current Snaky Tags an variables</li>
+            <li>Find, Find_All: Functions that find the first or all the elements of a collection that as the attribute
+                "key" and the value "value" for that attribute<br>
+                Usage is: <code>$Find({"collection": [{"name": "foo", "age": 12}, {"name": "bar", "age": 12}], "key":
+                    "name", "value": "foo"})</code> Will return {"name": "foo", "age": 12}</li>
+            <li>Get, Get_All: Functions that find the first or all the values of an attribute "key" in a collection of
+                elements<br>
+                Usage is: <code>$Get_All({"collection": [{"name": "foo", "age": 12}, {"name": "bar", "age": 12}], "key":
+                    "name"})</code> Will return ["foo", "bar"]</li>
+            <li>No_Return: A function that will return an empty string</li>
+            <li>Tags: A dict containing all the current Snaky Tags and variables</li>
         </ul>
         <p><img src="https://cdn.discordapp.com/attachments/499994899404554261/638922343825145866/unknown.png"
                 alt="example">
@@ -318,192 +338,371 @@
             <img src="https://cdn.discordapp.com/attachments/499994899404554261/639333207807885331/unknown.png"
                 alt="usage">
             <em>example of a command that uses variables</em><br>
-            <strong><em>/!\ Even when using a variable with a fixed value you must put () at the end /!\</em></strong></p>
+            <strong><em>/!\ It is not necessary to put () at the end /!\</em></strong></p>
         <p>It is also possible to declare or change the value of a variable using the vars keyword.</p>
         <p><img src="https://cdn.discordapp.com/attachments/499995405967425536/639436086447308801/unknown.png"
-            alt="example">
-        <img src="https://cdn.discordapp.com/attachments/499995405967425536/639436150213181450/unknown.png"
-            alt="usage">
-        <em>example of a command that uses variables, it works exactly as the previous one</em><br>
-        <p><span id="custom-ex"></span></p>
-        <h3>Examples</h3>
-        <hr>
-        <p><span id="custom-ex-simple"></span></p>
-        <ul>
-            <li>
-                <h5>Creating a Simple Emote</h5>
-                <hr>
-                <p>We are going to create a simple emote called "love", that will say "I love you" to everyone that is
-                    mentionned in the command, alongside with a simple heart image.
-                    In order to do this, we will need to use a json, containing a description for the "I love you", and
-                    an image for the heart:</p>
-                <h6>Let's first think about what we need to put inside our description:</h6>
-                <hr>
-                <p>There are two important parts in our description:</p>
-                <ol>
-                    <li>The "I love you"</li>
-                    <li>The user mentions</li>
-                </ol>
-                <p>The "I love you" is a single string, so we will put it as it inside our json, however for the user
-                    mentions we shall use a Snaky Tag.<br>
-                    The appropriate tag for this would be the "Mentions" one, and because we want all the mentions, we
-                    shall use "all" as the argument, thus giving us:</p>
-                <pre><code class="language-js"><span class="hljs-string">            "description"</span>: <span class="hljs-string">"I love you $Mentions(all)"</span>
+                alt="example">
+            <img src="https://cdn.discordapp.com/attachments/499995405967425536/639436150213181450/unknown.png"
+                alt="usage">
+            <em>example of a command that uses variables, it works exactly as the previous one</em><br>
+            <p><span id="custom-ex"></span></p>
+            <h3>Examples</h3>
+            <hr>
+            <p><span id="custom-ex-simple"></span></p>
+            <ul>
+                <li>
+                    <h5>Creating a Simple Emote</h5>
+                    <hr>
+                    <p>We are going to create a simple emote called "love", that will say "I love you" to everyone that
+                        is
+                        mentionned in the command, alongside with a simple heart image.
+                        In order to do this, we will need to use a json, containing a description for the "I love you",
+                        and
+                        an image for the heart:</p>
+                    <h6>Let's first think about what we need to put inside our description:</h6>
+                    <hr>
+                    <p>There are two important parts in our description:</p>
+                    <ol>
+                        <li>The "I love you"</li>
+                        <li>The user mentions</li>
+                    </ol>
+                    <p>The "I love you" is a single string, so we will put it as it inside our json, however for the
+                        user
+                        mentions we shall use a Snaky Tag.<br>
+                        The appropriate tag for this would be the "Mentions" one, and because we want all the mentions,
+                        we
+                        shall use "all" as the argument, thus giving us:</p>
+                    <pre><code class="language-js"><span class="hljs-string">            "description"</span>: <span class="hljs-string">"I love you $Mentions(all)"</span>
             </code></pre>
-                <h6>Let's now think about what we need to put inside our image:</h6>
-                <hr>
-                <p>For this image, we only really need a simple url,
-                    "https://cdn.pixabay.com/photo/2017/01/23/07/58/heart-2001744_640.png" could do the trick.<br>
-                    We can thus say:</p>
-                <pre><code class="language-js"><span class="hljs-string">            "image"</span>: {
+                    <h6>Let's now think about what we need to put inside our image:</h6>
+                    <hr>
+                    <p>For this image, we only really need a simple url,
+                        "https://cdn.pixabay.com/photo/2017/01/23/07/58/heart-2001744_640.png" could do the trick.<br>
+                        We can thus say:</p>
+                    <pre><code class="language-js"><span class="hljs-string">            "image"</span>: {
                 <span class="hljs-string">"url"</span>: <span class="hljs-string">"https://cdn.pixabay.com/photo/2017/01/23/07/58/heart-2001744_640.png"</span>
             }
             </code></pre>
-                <h6>Now let's put everything together:</h6>
-                <hr>
-                <pre><code class="language-js">            {
+                    <h6>Now let's put everything together:</h6>
+                    <hr>
+                    <pre><code class="language-js">            {
                 <span class="hljs-string">"description"</span>: <span class="hljs-string">"I love you $Mentions(all)"</span>,
                 <span class="hljs-string">"image"</span>: {
                     <span class="hljs-string">"url"</span>: <span class="hljs-string">"https://cdn.pixabay.com/photo/2017/01/23/07/58/heart-2001744_640.png"</span>
                 }
             }
             </code></pre>
-                <p>Let's try creating and using this command:
-                    <img src="https://cdn.discordapp.com/attachments/499994899404554261/638926342573916193/unknown.png"
-                        alt="creation">
-                    <img src="https://cdn.discordapp.com/attachments/499994899404554261/638926497821753364/unknown.png"
-                        alt="usage"></p>
-            </li>
-        </ul>
-        <p><span id="custom-ex-gif"></span></p>
-        <ul>
-            <li>
-                <h5>Creating a Reaction Command with a tenor gif</h5>
-                <hr>
-                <p>Being able to send the same heart over and over again is good, but what if we wanted to send a random
-                    gif instead ?<br>
-                    This is where the Gif tag intervienes !</p>
-                <p>If we take our previous "image" from the json:</p>
-                <pre><code class="language-js"><span class="hljs-string">            "image"</span>: {
+                    <p>Let's try creating and using this command:
+                        <img src="https://cdn.discordapp.com/attachments/499994899404554261/638926342573916193/unknown.png"
+                            alt="creation">
+                        <img src="https://cdn.discordapp.com/attachments/499994899404554261/638926497821753364/unknown.png"
+                            alt="usage"></p>
+                </li>
+            </ul>
+            <p><span id="custom-ex-gif"></span></p>
+            <ul>
+                <li>
+                    <h5>Creating a Reaction Command with a tenor gif</h5>
+                    <hr>
+                    <p>Being able to send the same heart over and over again is good, but what if we wanted to send a
+                        random
+                        gif instead ?<br>
+                        This is where the Gif tag intervienes !</p>
+                    <p>If we take our previous "image" from the json:</p>
+                    <pre><code class="language-js"><span class="hljs-string">            "image"</span>: {
                 <span class="hljs-string">"url"</span>: <span class="hljs-string">"https://cdn.pixabay.com/photo/2017/01/23/07/58/heart-2001744_640.png"</span>
             }
             </code></pre>
-                <p>We'd like to have a different url corresponding to a gif that shows love each time.<br>
-                    In order to do that, we could do <code>$Gif(love heart)</code>, to search for a gif from <a
-                        href="https://tenor.com">Tenor</a> with "love heart" as a search query, giving us:</p>
-                <pre><code class="language-js">            {
+                    <p>We'd like to have a different url corresponding to a gif that shows love each time.<br>
+                        In order to do that, we could do <code>$Gif(love heart)</code>, to search for a gif from <a
+                            href="https://tenor.com">Tenor</a> with "love heart" as a search query, giving us:</p>
+                    <pre><code class="language-js">            {
                 <span class="hljs-string">"description"</span>: <span class="hljs-string">"I love you $Mentions(all)"</span>,
                 <span class="hljs-string">"image"</span>: {
                     <span class="hljs-string">"url"</span>: <span class="hljs-string">"$Gif(love heart)"</span>
                 }
             }
             </code></pre>
-                <p>Let's try creating and using this command:
-                    <img src="https://cdn.discordapp.com/attachments/499994899404554261/638927916054347786/unknown.png"
-                        alt="creation">
-                    <img src="https://cdn.discordapp.com/attachments/499994899404554261/638928000322240528/unknown.png"
-                        alt="usage"></p>
-            </li>
-        </ul>
-        <p><span id="custom-ex-rnd"></span></p>
-        <ul>
-            <li>
-                <h5>Creating a Random Number Generator Command</h5>
-                <hr>
-                <p>A Random Number Generator is a simple command that can be pretty good to learn how to create
-                    commands.<br>
-                    The command we are going to create is the following one: the users invokes the command "random" with
-                    a number, and Snaky will answer with a number bewteen 0 and the input number.</p>
-                <p>If we split the problem into parts, we can find that:</p>
-                <ol>
-                    <li>We need to get the user's input</li>
-                    <li>We need to generate a random number with it</li>
-                </ol>
-                <p>Getting the user's input is all of what the Arguments tag is about, and generating a random number is
-                    the Random tag's job.
-                    However, in order to use the user's input as an argument for the Random tag, we will need to have
-                    nested tags, thus giving us the following:<br>
-                    <code>-define random $Random($Arguments(0))</code></p>
-                <p>Let's try creating and using this command:
-                    <img src="https://cdn.discordapp.com/attachments/499994899404554261/638930060472221727/unknown.png"
-                        alt="creation">
-                    <img src="https://cdn.discordapp.com/attachments/499994899404554261/638930118252953600/unknown.png"
-                        alt="usage">
-                    <em>Notice how the command still works even with an invalid argument: the Random tag used to default to 100 as the maximum
-                        when the passed parameter is invalid, now it defaults at 1</em></p>
-            </li>
-        </ul>
-        <p><span id="custom-ex-coin"></span></p>
-        <ul>
-            <li>
-                <h5>Creating a Coin Flip</h5>
-                <hr>
-                <p>Creating a Coin Flip command seems to be rather close to creating a Random Number Generator. In fact,
-                    it is almost as generating a number between 0 and 1.<br>
-                    Though, we want Snaky to either say "Heads" or "Tails" and not 0 and 1.<br>
-                    In order to do that, we could use a list of length 2, <code>["Heads", "Tails"]</code> and take a
-                    random element of this list.<br>
-                    In order to create the list, we'll have to use the Json tag like this: <code>$Json(["Heads",
-                        "Tails"])</code><br>
-                    Then we need to take a random element from it:<br>
-                    <code>$Json(["Heads", "Tails"])($Random(1))</code></p>
-                <p>Our define command now looks like this:<br>
-                    <code>-define coin $Json(["Heads", "Tails"])($Random(1))</code></p>
-                <p>Let's try creating and using this command:
-                    <img src="https://cdn.discordapp.com/attachments/499994899404554261/638933624288313354/unknown.png"
-                        alt="creation">
-                    <img src="https://cdn.discordapp.com/attachments/499994899404554261/638933661776871425/unknown.png"
-                        alt="usage"></p>
-            </li>
-        </ul>
-        <p><span id="custom-ex-cat"></span></p>
-        <ul>
-            <li>
-                <h5>Creating a Random Cat Image command</h5>
-                <hr>
-                <p>Let's try creating a command called "cat" that will give us a random image of a cat, not necesserally
-                    a gif.<br>
-                    In order to do that, using Tenor may not seem the best idea, as the image may not always be a cat,
-                    but an image related to a cat (a cat costume for example).<br>
-                    What we would need would be rather a <a href="https://thecatapi.com/">Cat API</a> (Like
-                    <code>https://thecatapi.com/</code>), that we can find on the web.<br>
-                    In order to use this API, we need to use the Request tag, that allows us to make requests with a
-                    given <a href="https://api.thecatapi.com/v1/images/search/">URL</a> (Here,
-                    <code>https://api.thecatapi.com/v1/images/search/</code>).<br>
-                    We thus have:<br>
-                    <code>$Request(https://api.thecatapi.com/v1/images/search)</code><br>
-                    If we use this, we get the following result:</p>
-                <pre><code class="language-js">[{<span class="hljs-string">"breeds"</span>:[],<span class="hljs-string">"id"</span>:<span class="hljs-string">"20k"</span>,<span class="hljs-string">"url"</span>:<span class="hljs-string">"https://cdn2.thecatapi.com/images/20k.jpg"</span>,<span class="hljs-string">"width"</span>:<span class="hljs-number">575</span>,<span class="hljs-string">"height"</span>:<span class="hljs-number">860</span>}]
+                    <p>Let's try creating and using this command:
+                        <img src="https://cdn.discordapp.com/attachments/499994899404554261/638927916054347786/unknown.png"
+                            alt="creation">
+                        <img src="https://cdn.discordapp.com/attachments/499994899404554261/638928000322240528/unknown.png"
+                            alt="usage"></p>
+                </li>
+            </ul>
+            <p><span id="custom-ex-rnd"></span></p>
+            <ul>
+                <li>
+                    <h5>Creating a Random Number Generator Command</h5>
+                    <hr>
+                    <p>A Random Number Generator is a simple command that can be pretty good to learn how to create
+                        commands.<br>
+                        The command we are going to create is the following one: the users invokes the command "random"
+                        with
+                        a number, and Snaky will answer with a number bewteen 0 and the input number.</p>
+                    <p>If we split the problem into parts, we can find that:</p>
+                    <ol>
+                        <li>We need to get the user's input</li>
+                        <li>We need to generate a random number with it</li>
+                    </ol>
+                    <p>Getting the user's input is all of what the Arguments tag is about, and generating a random
+                        number is
+                        the Random tag's job.
+                        However, in order to use the user's input as an argument for the Random tag, we will need to
+                        have
+                        nested tags, thus giving us the following:<br>
+                        <code>-define random $Random($Arguments(0))</code></p>
+                    <p>Let's try creating and using this command:
+                        <img src="https://cdn.discordapp.com/attachments/499994899404554261/638930060472221727/unknown.png"
+                            alt="creation">
+                        <img src="https://cdn.discordapp.com/attachments/499994899404554261/638930118252953600/unknown.png"
+                            alt="usage">
+                        <em>Notice how the command still works even with an invalid argument: the Random tag used to
+                            default to 100 as the maximum
+                            when the passed parameter is invalid, now it defaults at 1</em></p>
+                </li>
+            </ul>
+            <p><span id="custom-ex-coin"></span></p>
+            <ul>
+                <li>
+                    <h5>Creating a Coin Flip</h5>
+                    <hr>
+                    <p>Creating a Coin Flip command seems to be rather close to creating a Random Number Generator. In
+                        fact,
+                        it is almost as generating a number between 0 and 1.<br>
+                        Though, we want Snaky to either say "Heads" or "Tails" and not 0 and 1.<br>
+                        In order to do that, we could use a list of length 2, <code>["Heads", "Tails"]</code> and take a
+                        random element of this list.<br>
+                        In order to create the list, we'll have to use the Json tag like this: <code>$Json(["Heads",
+                            "Tails"])</code><br>
+                        Then we need to take a random element from it:<br>
+                        <code>$Json(["Heads", "Tails"])($Random(1))</code></p>
+                    <p>Our define command now looks like this:<br>
+                        <code>-define coin $Json(["Heads", "Tails"])($Random(1))</code></p>
+                    <p>Let's try creating and using this command:
+                        <img src="https://cdn.discordapp.com/attachments/499994899404554261/638933624288313354/unknown.png"
+                            alt="creation">
+                        <img src="https://cdn.discordapp.com/attachments/499994899404554261/638933661776871425/unknown.png"
+                            alt="usage"></p>
+                </li>
+            </ul>
+            <p><span id="custom-ex-cat"></span></p>
+            <ul>
+                <li>
+                    <h5>Creating a Random Cat Image command</h5>
+                    <hr>
+                    <p>Let's try creating a command called "cat" that will give us a random image of a cat, not
+                        necesserally
+                        a gif.<br>
+                        In order to do that, using Tenor may not seem the best idea, as the image may not always be a
+                        cat,
+                        but an image related to a cat (a cat costume for example).<br>
+                        What we would need would be rather a <a href="https://thecatapi.com/">Cat API</a> (Like
+                        <code>https://thecatapi.com/</code>), that we can find on the web.<br>
+                        In order to use this API, we need to use the Request tag, that allows us to make requests with a
+                        given <a href="https://api.thecatapi.com/v1/images/search/">URL</a> (Here,
+                        <code>https://api.thecatapi.com/v1/images/search/</code>).<br>
+                        We thus have:<br>
+                        <code>$Request(https://api.thecatapi.com/v1/images/search)</code><br>
+                        If we use this, we get the following result:</p>
+                    <pre><code class="language-js">[{<span class="hljs-string">"breeds"</span>:[],<span class="hljs-string">"id"</span>:<span class="hljs-string">"20k"</span>,<span class="hljs-string">"url"</span>:<span class="hljs-string">"https://cdn2.thecatapi.com/images/20k.jpg"</span>,<span class="hljs-string">"width"</span>:<span class="hljs-number">575</span>,<span class="hljs-string">"height"</span>:<span class="hljs-number">860</span>}]
             </code></pre>
-                <p>We get a json object inside a list of length 1.<br>
-                    In order to use this object, we must use the Json tag to convert this list into a python list, and
-                    the get the element at index 0:<br>
-                    <code>$Json($Request(https://api.thecatapi.com/v1/images/search))(0)</code><br>
-                    This will give us:</p>
-                <pre><code class="language-js">{<span class="hljs-string">"breeds"</span>:[],<span class="hljs-string">"id"</span>:<span class="hljs-string">"20k"</span>,<span class="hljs-string">"url"</span>:<span class="hljs-string">"https://cdn2.thecatapi.com/images/20k.jpg"</span>,<span class="hljs-string">"width"</span>:<span class="hljs-number">575</span>,<span class="hljs-string">"height"</span>:<span class="hljs-number">860</span>}
+                    <p>We get a json object inside a list of length 1.<br>
+                        In order to use this object, we must use the Json tag to convert this list into a python list,
+                        and
+                        the get the element at index 0:<br>
+                        <code>$Json($Request(https://api.thecatapi.com/v1/images/search))(0)</code><br>
+                        This will give us:</p>
+                    <pre><code class="language-js">{<span class="hljs-string">"breeds"</span>:[],<span class="hljs-string">"id"</span>:<span class="hljs-string">"20k"</span>,<span class="hljs-string">"url"</span>:<span class="hljs-string">"https://cdn2.thecatapi.com/images/20k.jpg"</span>,<span class="hljs-string">"width"</span>:<span class="hljs-number">575</span>,<span class="hljs-string">"height"</span>:<span class="hljs-number">860</span>}
             </code></pre>
-                <p>However, we want to get the url to put it inside our embed json, we will thus do:<br>
-                    <code>$Json($Request(https://api.thecatapi.com/v1/images/search))(0)(url)</code><br>
-                    Which gives us:</p>
-                <pre><code class="language-js"><span class="hljs-string">"https://cdn2.thecatapi.com/images/20k.jpg"</span>
+                    <p>However, we want to get the url to put it inside our embed json, we will thus do:<br>
+                        <code>$Json($Request(https://api.thecatapi.com/v1/images/search))(0)(url)</code><br>
+                        Which gives us:</p>
+                    <pre><code class="language-js"><span class="hljs-string">"https://cdn2.thecatapi.com/images/20k.jpg"</span>
             </code></pre>
-                <p>Let's now put that inside our embed json:</p>
-                <pre><code class="language-js">            {
+                    <p>Let's now put that inside our embed json:</p>
+                    <pre><code class="language-js">            {
                 <span class="hljs-string">"image"</span>: {
                     <span class="hljs-string">"url"</span>: <span class="hljs-string">"$Json($Request(https://api.thecatapi.com/v1/images/search))(0)(url)"</span>
                 }
             }
             </code></pre>
-                <p>Let's try creating and using this command:
-                    <img src="https://cdn.discordapp.com/attachments/499994899404554261/638938615749148683/unknown.png"
-                        alt="creation">
-                    <img src="https://cdn.discordapp.com/attachments/499994899404554261/638938674041716747/unknown.png"
-                        alt="usage"></p>
-            </li>
+                    <p>Let's try creating and using this command:
+                        <img src="https://cdn.discordapp.com/attachments/499994899404554261/638938615749148683/unknown.png"
+                            alt="creation">
+                        <img src="https://cdn.discordapp.com/attachments/499994899404554261/638938674041716747/unknown.png"
+                            alt="usage"></p>
+                </li>
+            </ul>
+            <p><span id="bank"></span></p>
+            <h1>Bank of Custom Commands</h1>
+            <p>Here are some custom commands definition that you can copy-paste to add to your guild</p>
+            <ul>
+                <li><a href="#bank-base">Base Emotes</a></li>
+                <li><a href="#bank-image">Image-Getting Commands</a></li>
+            </ul>
+            <span id="bank-base"></span>
+            <h3>Base Emotes</h3>
+            <hr>
+            <p>These are the commands that are added by default to your guild.</p>
+            <ul>
+                <li>
+                    <h5>Sleep</h5>
+    <pre>
+-define sleep {
+    "title": "$Author(name) went to sleep",
+    "description": "Good night $Author(mention)",
+    "image": {
+        "url": "$Gif(anime sleep)"
+    }
+}
+</pre>
+                </li>
+                <li>
+                    <h5>Kiss</h5>
+    <pre>
+-define kiss {
+    "description": "$Author(mention) kissed $Arguments(all)",
+    "image": {
+        "url": "$Gif(anime kiss)"
+    }
+}
+</pre>
+                </li>
+                <li>
+                    <h5>Hug</h5>
+    <pre>
+-define hug {
+    "description": "$Author(mention) hugged $Arguments(all)",
+    "image": {
+        "url": "$Gif(anime hug)"
+    }
+}
+</pre>
+                </li>
+                <li>
+                    <h5>Eat</h5>
+    <pre>
+-define eat {
+    "description": "$Author(mention) is going to eat $Arguments(all)",
+    "image": {
+        "url": "$Gif(anime eat)"
+    }
+}
+</pre>
+                </li>
+                <li>
+                    <h5>Cry</h5>
+<pre>
+-define cry {
+    "description": "$Author(mention) is crying",
+    "image": {
+        "url": "$Gif(anime cry)"
+    }
+}
+</pre>
+                </li>
+                <li>
+                    <h5>Nuke</h5>
+<pre>
+-define nuke {
+    "description": "$Author(mention) nuked $Arguments(all) :D",
+    "image": {
+        "url": "https://cdn.discordapp.com/attachments/333959605883240448/481588083226050571/telechargement.gif"
+    }
+}
+</pre>
+                </li>
+                <li>
+                    <h5>Shoot</h5>
+<pre>
+-define shoot {
+    "description": "$Author(mention) shot $Arguments(all)",
+    "image": {
+        "url": "$Gif(anime shoot fire)"
+    }
+}
+</pre>
+                </li>
+            </ul>
+            <span id="bank-image"></span>
+            <h3>Image-Getting Commands</h3>
+            <hr>
+            <p>Here are some commands that will allow you to get the image url of different elements of the guild</p>
+            <ul>
+                <li>
+                    <h5>Avatar</h5>
+<pre>
+    -define avatar {
+        "vars": {
+            "params": {
+                "size": 1024,
+                "format": null,
+                "static_format": "png"
+            }
+        },
+        "image": {
+            "url": "$Mentions(0)(avatar_url_as)($params)"
+        },
+        "error": {
+            "image": {
+                "url": "$Author(avatar_url_as)($params)"
+            }
+        }
+    }
+</pre>
+                    <img src="https://cdn.discordapp.com/attachments/499994899404554261/640586642653970441/unknown.png"
+                        alt="usage">
+        </p>
+        <img src="https://cdn.discordapp.com/attachments/499994899404554261/640586790302121984/unknown.png" alt="usage">
+        </p>
+        </li>
+        <li>
+            <h5>Guild Icon</h5>
+<pre>
+-define guild_icon {
+"vars": {
+    "params": {
+        "size": 1024,
+        "format": null,
+        "static_format": "png"
+    }
+},
+"image": {
+    "url": "$Guild(icon_url_as)($params)"
+    }
+}
+</pre>
+            <img src="https://cdn.discordapp.com/attachments/499994899404554261/640586642653970441/unknown.png"
+                alt="usage"></p>
+        </li>
+        <li>
+            <h5>Emoji</h5>
+<pre>
+-define get_emoji {
+    "vars": {
+        "search_param": {
+            "collection": "$Guild(emojis)",
+            "key": "name",
+            "value": "$Arguments(all)"
+        },
+        "emoji": "$Find($search_param)"
+    },
+    "after": {
+        "description": "$emoji(name): $emoji",
+        "image": {
+            "url": "$emoji(url)"
+        }
+    }
+}
+</pre>
+            <img src="https://cdn.discordapp.com/attachments/499995683768762368/640588326386139156/unknown.png"
+                alt="usage"></p>
+        </li>
         </ul>
         <p>Enjoy !</p>
-        <hr/>
-        <h6 style="text-align: center;">Snaky is in 5.4.2 - by <a href="https://sheinxy.github.io">Sheinxy</a></h6>
+        <hr />
+        <h6 style="text-align: center;">Snaky is in 5.5 - by <a href="https://sheinxy.github.io">Sheinxy</a></h6>
     </article>
 </body>
 
