@@ -633,23 +633,23 @@
                 <li>
                     <h5>Avatar</h5>
 <pre>
-    -define avatar {
-        "vars": {
-            "params": {
-                "size": 1024,
-                "format": null,
-                "static_format": "png"
-            }
-        },
+-define avatar {
+    "vars": {
+        "params": {
+            "size": 1024,
+            "format": null,
+            "static_format": "png"
+        }
+    },
+    "image": {
+        "url": "$Mentions(0)(avatar_url_as)($params)"
+    },
+    "error": {
         "image": {
-            "url": "$Mentions(0)(avatar_url_as)($params)"
-        },
-        "error": {
-            "image": {
-                "url": "$Author(avatar_url_as)($params)"
-            }
+            "url": "$Author(avatar_url_as)($params)"
         }
     }
+}
 </pre>
                     <img src="https://cdn.discordapp.com/attachments/499994899404554261/640586642653970441/unknown.png"
                         alt="usage">
@@ -661,16 +661,16 @@
             <h5>Guild Icon</h5>
 <pre>
 -define guild_icon {
-"vars": {
-    "params": {
-        "size": 1024,
-        "format": null,
-        "static_format": "png"
-    }
-},
-"image": {
-    "url": "$Guild(icon_url_as)($params)"
-    }
+    "vars": {
+        "params": {
+            "size": 1024,
+            "format": null,
+            "static_format": "png"
+        }
+    },
+    "image": {
+        "url": "$Guild(icon_url_as)($params)"
+        }
 }
 </pre>
             <img src="https://cdn.discordapp.com/attachments/499994899404554261/640586642653970441/unknown.png"
