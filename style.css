@@ -1,0 +1,134 @@
+body {
+    margin: 0px;
+    background-color: black;
+    filter: brightness(80%);
+    overflow: hidden;
+}
+
+.content {
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.content div {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: -1;
+    }
+}
+
+.fadeIn {
+    opacity: 0;
+    animation: fadeIn .5s ease-in 1 forwards;
+}
+
+.fadeOut {
+    animation: fadeOut .5s ease-in 1 forwards;
+}
+
+#welcome, #recentProjects, #allProjects{
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: whitesmoke;
+    font-size: 20px;
+}
+
+#welcome p , #recentProjects p, #allProjects p{
+    margin-top: -20px;
+}
+
+#welcome img, #recentProjects img, #allProjects img{
+    border-radius: 100px;
+    margin-top: 25vh;
+    filter: drop-shadow(8px 8px 20px black);
+}
+
+#welcome ul, .navList ul {
+    display: inline;
+}
+
+#welcome li, .navList li {
+    display: inline-block;
+}
+
+.button {
+    background-color: blueviolet;
+    border-radius: 13px;
+    padding: 7px;
+    margin-left: 25px;
+    margin-right: 25px;
+    filter: drop-shadow(10px 10px 20px black);
+}
+
+.button:hover {
+    background-color: indigo;
+    cursor: pointer;
+}
+
+.button a {
+    font-size: 25px;
+    color: whitesmoke;
+    text-decoration: none;
+    filter: drop-shadow(8px 8px 25px black);
+}
+
+.button a:hover{
+    color: burlywood;
+}
+
+.nav {
+    position: fixed;
+    top: 0px;
+    width: 50px;
+    height: 100%;
+    color: whitesmoke;
+    text-align: center;
+    font-size: 40px;
+    background-color: brown;
+    filter: opacity(5%);
+}
+
+.nav:hover {
+    cursor: pointer;
+}
+
+.nav a {
+    position: relative;
+    top: 45%;
+    filter: opacity(100%);
+}
+
+.rightNav {
+    right: 0px;
+}
+
+.navList {
+    position: fixed;
+    bottom: 10px;
+    width: 95%;
+    color: whitesmoke;
+    text-align: center;
+}
+
+.navList .button {
+    border-radius: 10px;
+}
+
+.navList .button a{
+    font-size: 10px;
+}
